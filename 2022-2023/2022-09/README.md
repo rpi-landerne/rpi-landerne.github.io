@@ -1,1 +1,1 @@
-- **Séance du : [Samedi 24 Septembre 2022](./2022-09/24-09-2022.md).**
+- **Séance du : [Samedi 24 Septembre 2022](./24-09-2022.md).**
