@@ -1,5 +1,6 @@
 <h1 align="center">SAISON 2022 - 2023</h1>
-
+**Séance du : [Mardi 10 Janvier 2023](./2023-01/10-01-2023.md).**
+<br>
 **Séance du : [Mardi 08 Novembre 2022](./2022-11/08-11-2022.md).**
 <br>
 **Séance du : [Samedi 22 Octobre 2022](./2022-10/22-10-2022.md).**
