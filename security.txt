@@ -1,0 +1,3 @@
+Preferred-Languages: fr, en
+Expires: 2030-01-01T00:00:00.000Z
+Contact: mailto:3xpl0it.sh4d0w@pm.me
