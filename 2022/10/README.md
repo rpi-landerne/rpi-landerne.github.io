@@ -1,1 +1,1 @@
-- **Séance du : [Samedi 22 Octobre 2022](./22-10-2022.md).** 
+- **Séance du : [Samedi 22 Octobre 2022](./22.md).** 
