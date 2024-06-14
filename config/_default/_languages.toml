@@ -1,0 +1,11 @@
+[en]
+languageName = "English"
+languagedirection = "ltr"
+title = "Example Site"
+weight = 1
+
+[fr]
+languageName = "French"
+languagedirection = "ltr"
+title = "Exemple Site"
+weight = 2

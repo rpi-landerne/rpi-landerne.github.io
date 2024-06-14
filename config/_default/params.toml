@@ -1,0 +1,61 @@
+favicon = "/favicon.png"
+
+mainSections = ["post"]
+
+[footer]
+since = 2017
+
+[dateFormat]
+published = "02 Jan, 2006"
+lastUpdated = "02 Jan, 2006 15:04 MST"
+
+[sidebar]
+subtitle = "Site de l'Atelier Raspberry Pi situé à la MPT de Landerneau."
+
+[sidebar.avatar]
+local = true
+enabled = true
+src = "img/logo.png"
+
+[article]
+headingAnchor = false   
+readingTime = true
+
+[article.license]
+enabled = true
+default = "Licensed under CC BY-NC-SA 4.0"
+
+## Widgets
+[[widgets.homepage]]
+type = "search"
+
+[[widgets.homepage]]
+type = "archives"
+
+[widgets.homepage.params]
+limit = 5
+
+[[widgets.homepage]]
+type = "categories"
+
+[widgets.homepage.params]
+limit = 10
+
+[[widgets.homepage]]
+type = "tag-cloud"
+
+[widgets.homepage.params]
+limit = 10
+
+[[widgets.page]]
+type = "toc"
+
+[colorScheme]
+toggle = true
+default = "auto"
+
+[imageProcessing.cover]
+enabled = true
+
+[imageProcessing.content]
+enabled = true

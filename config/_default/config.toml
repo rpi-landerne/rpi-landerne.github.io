@@ -1,0 +1,12 @@
+# Nous disons que le SSG est déployé ici
+baseurl = "https://rpi-landerne.github.io/"
+
+# Nous configurons ici la langue en Français
+languageCode = "fr-fr"
+defaultContentLanguage = "fr"
+
+# Nous choisissons d'afficher 4 articles par pages
+paginate = 4
+
+# Ici se trouve le titre du site
+title = "RPi Landerne"

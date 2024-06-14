@@ -1,0 +1,2 @@
+post = "/seance/:slug/"
+page = "/:slug/"
