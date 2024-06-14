@@ -1,5 +1,5 @@
 # Nous disons que le SSG est déployé ici
-baseurl = "https://rpi-landerne.github.io/"
+baseurl = "https://rpi-landerne.github.io"
 
 # Nous configurons ici la langue en Français
 languageCode = "fr-fr"
