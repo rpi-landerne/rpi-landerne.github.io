@@ -1,0 +1,761 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>RPi Landerne</title><link>https://rpi-landerne.github.io/</link><description>Recent content on RPi Landerne</description><generator>Hugo -- gohugo.io</generator><language>fr-fr</language><lastBuildDate>Tue, 11 Jun 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://rpi-landerne.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>Séance du 11 Juin 2024</title><link>https://rpi-landerne.github.io/seance/2024-06-11/</link><pubDate>Tue, 11 Jun 2024 00:00:00 +0000</pubDate><guid>https://rpi-landerne.github.io/seance/2024-06-11/</guid><description>&lt;h2 id="horaire-et-lieu">Horaire et Lieu
+&lt;/h2>&lt;p>Le Mardi de 18h à 20h à la MPT de Landerneau.&lt;/p>
+&lt;h2 id="au-programme">Au programme
+&lt;/h2>&lt;ul>
+&lt;li>Faire tourner un LLM en local sur un PC.&lt;/li>
+&lt;li>Conception d&amp;rsquo;une page HTML avec du JS pour le dynamisme.&lt;/li>
+&lt;li>Utilisation du Module Python HTTP.Server (Serveur Web Local).&lt;/li>
+&lt;/ul>
+&lt;h2 id="références">Références
+&lt;/h2>&lt;ul>
+&lt;li>&lt;a class="link" href="https://ollama.com/" target="_blank" rel="noopener"
+>Ollama | Pour executer des LLMs en local&lt;/a>.&lt;/li>
+&lt;li>&lt;a class="link" href="https://fr.wikipedia.org/wiki/Grand_mod%C3%A8le_de_langage" target="_blank" rel="noopener"
+>Wikipedia - Grand Modèle de Langage&lt;/a>.&lt;/li>
+&lt;li>&lt;a class="link" href="https://github.com/mozilla-Ocho/llamafile" target="_blank" rel="noopener"
+>Github - mozilla-Ocho - llamafile&lt;/a> |&lt;/li>
+&lt;li>&lt;a class="link" href="https://linuxfr.org/users/aboulle/journaux/introduction-pratique-aux-grands-modeles-de-langage-llm" target="_blank" rel="noopener"
+>LinuxFr - Introduction aux LMMs&lt;/a>.&lt;/li>
+&lt;li>&lt;a class="link" href="https://w3schools.com/html/" target="_blank" rel="noopener"
+>W3Schools - HTML Tutorial | Pour le contenu de la page web&lt;/a>.&lt;/li>
+&lt;li>&lt;a class="link" href="https://w3schools.com/css/" target="_blank" rel="noopener"
+>W3Schools - CSS Tutorial | Pour la mise en forme de la page web&lt;/a>.&lt;/li>
+&lt;li>&lt;a class="link" href="https://w3schools.com/jsref/dom_obj_event.asp" target="_blank" rel="noopener"
+>W3Schools - HTML DOM Events | Pour contrôler les évenements de la page web&lt;/a>.&lt;/li>
+&lt;li>&lt;a class="link" href="https://www.w3schools.com/css/css3_animations.asp" target="_blank" rel="noopener"
+>W3Schools - CSS Animations | Afin d&amp;rsquo;ajouter des animations CSS&lt;/a>.&lt;/li>
+&lt;li>&lt;a class="link" href="https://www.w3schools.com/css/css3_transitions.asp" target="_blank" rel="noopener"
+>W3Shools - CSS Transitions | Afin d&amp;rsquo;ajouter des transitions en CSS&lt;/a>.&lt;/li>
+&lt;/ul></description></item><item><title>Séance du 25 Mai 2024</title><link>https://rpi-landerne.github.io/seance/2024-05-25/</link><pubDate>Sat, 25 May 2024 00:00:00 +0000</pubDate><guid>https://rpi-landerne.github.io/seance/2024-05-25/</guid><description>&lt;h2 id="horaire-et-lieu">Horaire et Lieu
+&lt;/h2>&lt;p>Le Samedi de 10h à 12h à la MPT de Landerneau.&lt;/p>
+&lt;h2 id="au-programme">Au programme
+&lt;/h2>&lt;ul>
+&lt;li>Conception d&amp;rsquo;une page HTML avec du JavaScript pour le dynamisme.&lt;/li>
+&lt;li>Utilisation du Module Python HTTP.Server (Serveur Web Local).&lt;/li>
+&lt;/ul>
+&lt;h2 id="travaux-pratiques">Travaux Pratiques
+&lt;/h2>&lt;h3 id="création-du-répertoire-et-fichier-html">Création du répertoire et fichier HTML
+&lt;/h3>&lt;p>Nous nous déplaçons dans notre répertoire de travail&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-sh" data-lang="sh">&lt;span class="line">&lt;span class="cl">&lt;span class="nb">cd&lt;/span> travail
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>Nous y créons un répertoire appelé serveurweb&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-sh" data-lang="sh">&lt;span class="line">&lt;span class="cl">mkdir serveurweb
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>Nous nous déplaçons dans le répertoire créé&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-sh" data-lang="sh">&lt;span class="line">&lt;span class="cl">&lt;span class="nb">cd&lt;/span> serveurweb
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>Nous créons un fichier &amp;ldquo;index.html&amp;rdquo;&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-sh" data-lang="sh">&lt;span class="line">&lt;span class="cl">touch index.html
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="ouvrons-le-fichier-indexhtml">Ouvrons le fichier &amp;ldquo;index.html&amp;rdquo;
+&lt;/h3>&lt;p>Nous ouvrons le fichier &amp;ldquo;index.html&amp;rdquo; avec notre editeur de texte&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-sh" data-lang="sh">&lt;span class="line">&lt;span class="cl">nano index.html
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="ajoutons-du-contenu-html">Ajoutons du contenu HTML
+&lt;/h3>&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">&lt;span class="cp">&amp;lt;!DOCTYPE html&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">html&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">head&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">title&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>Ma Page&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">title&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">head&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">body&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">h1&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>Ma page Web&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">h1&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">body&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">html&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="démarrons-le-serveur-web">Démarrons le serveur web
+&lt;/h3>&lt;p>Nous utilisons la librairie HTTP de Python&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-sh" data-lang="sh">&lt;span class="line">&lt;span class="cl">python -m http.server &lt;span class="m">8080&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="affichons-la-page-web-dans-notre-navigateur">Affichons la page web dans notre navigateur
+&lt;/h3>&lt;p>Ouvrons notre navigateur et tapons : &lt;a class="link" href="http://localhost:8080" target="_blank" rel="noopener"
+>http://localhost:8080&lt;/a>.&lt;/p>
+&lt;h3 id="modifions-notre-page-html">Modifions notre page HTML
+&lt;/h3>&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;span class="lnt">24
+&lt;/span>&lt;span class="lnt">25
+&lt;/span>&lt;span class="lnt">26
+&lt;/span>&lt;span class="lnt">27
+&lt;/span>&lt;span class="lnt">28
+&lt;/span>&lt;span class="lnt">29
+&lt;/span>&lt;span class="lnt">30
+&lt;/span>&lt;span class="lnt">31
+&lt;/span>&lt;span class="lnt">32
+&lt;/span>&lt;span class="lnt">33
+&lt;/span>&lt;span class="lnt">34
+&lt;/span>&lt;span class="lnt">35
+&lt;/span>&lt;span class="lnt">36
+&lt;/span>&lt;span class="lnt">37
+&lt;/span>&lt;span class="lnt">38
+&lt;/span>&lt;span class="lnt">39
+&lt;/span>&lt;span class="lnt">40
+&lt;/span>&lt;span class="lnt">41
+&lt;/span>&lt;span class="lnt">42
+&lt;/span>&lt;span class="lnt">43
+&lt;/span>&lt;span class="lnt">44
+&lt;/span>&lt;span class="lnt">45
+&lt;/span>&lt;span class="lnt">46
+&lt;/span>&lt;span class="lnt">47
+&lt;/span>&lt;span class="lnt">48
+&lt;/span>&lt;span class="lnt">49
+&lt;/span>&lt;span class="lnt">50
+&lt;/span>&lt;span class="lnt">51
+&lt;/span>&lt;span class="lnt">52
+&lt;/span>&lt;span class="lnt">53
+&lt;/span>&lt;span class="lnt">54
+&lt;/span>&lt;span class="lnt">55
+&lt;/span>&lt;span class="lnt">56
+&lt;/span>&lt;span class="lnt">57
+&lt;/span>&lt;span class="lnt">58
+&lt;/span>&lt;span class="lnt">59
+&lt;/span>&lt;span class="lnt">60
+&lt;/span>&lt;span class="lnt">61
+&lt;/span>&lt;span class="lnt">62
+&lt;/span>&lt;span class="lnt">63
+&lt;/span>&lt;span class="lnt">64
+&lt;/span>&lt;span class="lnt">65
+&lt;/span>&lt;span class="lnt">66
+&lt;/span>&lt;span class="lnt">67
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">&lt;span class="cp">&amp;lt;!DOCTYPE html&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">html&lt;/span> &lt;span class="na">lang&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;fr&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">head&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">meta&lt;/span> &lt;span class="na">charset&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;UTF-8&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">title&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>Ma Page&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">title&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">style&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">h1&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">color&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">red&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">text-align&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">center&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">#&lt;/span>&lt;span class="nn">vert&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">color&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">chartreuse&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">text-align&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">center&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">div&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">width&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">100&lt;/span>&lt;span class="kt">px&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">height&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">100&lt;/span>&lt;span class="kt">px&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">background-color&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">red&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">position&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">relative&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">animation-name&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="n">example&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">animation-duration&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">4&lt;/span>&lt;span class="kt">s&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">animation-delay&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">2&lt;/span>&lt;span class="kt">s&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">@&lt;/span>&lt;span class="k">keyframes&lt;/span> &lt;span class="nt">example&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">0&lt;/span>&lt;span class="o">%&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">left&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="kt">px&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="k">top&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="kt">px&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">background-color&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="kc">red&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">25&lt;/span>&lt;span class="o">%&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">left&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="mi">200&lt;/span>&lt;span class="kt">px&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="k">top&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="kt">px&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">background-color&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="kc">yellow&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">50&lt;/span>&lt;span class="o">%&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">left&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="mi">200&lt;/span>&lt;span class="kt">px&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="k">top&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="mi">200&lt;/span>&lt;span class="kt">px&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">background-color&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="kc">blue&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">75&lt;/span>&lt;span class="o">%&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">left&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="kt">px&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="k">top&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="mi">200&lt;/span>&lt;span class="kt">px&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">background-color&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="kc">green&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">100&lt;/span>&lt;span class="o">%&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">left&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="kt">px&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="k">top&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="kt">px&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">background-color&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="kc">red&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">style&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">head&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">body&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">h1&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>Ma page Web&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">h1&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">p&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>Je fais du vélo&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">p&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">h1&lt;/span> &lt;span class="na">id&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;vert&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>Ma page Web Titre 2&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">h1&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">div&lt;/span>&lt;span class="p">&amp;gt;&amp;lt;/&lt;/span>&lt;span class="nt">div&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">body&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">html&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="références">Références
+&lt;/h2>&lt;ul>
+&lt;li>&lt;a class="link" href="https://github.com/gohugoio/hugo" target="_blank" rel="noopener"
+>Github - Hugo | Générateur de Site Statique écrit en Golang&lt;/a>.&lt;/li>
+&lt;li>&lt;a class="link" href="https://shamacher.eu/blog/brachiograph/" target="_blank" rel="noopener"
+>Shamacher - Brachiograph | Stylo traceur simple et intuitif&lt;/a>.&lt;/li>
+&lt;li>&lt;a class="link" href="https://flask.palletsprojects.com/en/3.0.x/" target="_blank" rel="noopener"
+>Flask - Documentation | Micro Framework en Python&lt;/a>.&lt;/li>
+&lt;li>&lt;a class="link" href="https://nicegui.io/" target="_blank" rel="noopener"
+>Nicegui | Un framework Python pour faire des interfaces web&lt;/a>.&lt;/li>
+&lt;/ul></description></item><item><title>Séance du 14 Mai 2024</title><link>https://rpi-landerne.github.io/seance/2024-05-14/</link><pubDate>Tue, 14 May 2024 00:00:00 +0000</pubDate><guid>https://rpi-landerne.github.io/seance/2024-05-14/</guid><description>&lt;h2 id="horaire-et-lieu">Horaire et Lieu
+&lt;/h2>&lt;p>Mardi de 18h à 20h à la MPT de Landerneau.&lt;/p>
+&lt;h2 id="au-programme">Au programme
+&lt;/h2>&lt;ul>
+&lt;li>Comment ça marche: Large Language Model (LLM): tokenizer.
+&lt;ul>
+&lt;li>Avec des exemples.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>BrachioGraph
+&lt;ul>
+&lt;li>intégration&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="travaux-pratiques">Travaux Pratiques
+&lt;/h2>&lt;h3 id="exercice-numéro-1">Exercice numéro #1
+&lt;/h3>&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-sh" data-lang="sh">&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># Nous nous déplaçons dans le répertoire de travail&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">cd&lt;/span> travail
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># Nous créons un répertoire &amp;#34;llm&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">mkdir llm
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># Nous nous déplaçons dans ce dernier&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">cd&lt;/span> llm
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># Nous créons un environnement virtuel&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">python3 -m venv .venv
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># Nous activons l&amp;#39;environnement virtuel&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">source&lt;/span> .venv/bin/activate
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># Procédons à l&amp;#39;installation de la bibliothèque Tiktoken&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># Code source de la bibliothèque : https://github.com/openai/tiktoken&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># transformer des mots en nombres pour un traitement numérique de données&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">pip install tiktoken
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># A présent créons le fichier pour y mettre du code&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">touch test_tiktoken.py
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># Editons ce dernier&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">nano test_tiktoken.py
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h4 id="exercice-numéro-1---code-source">Exercice numéro #1 - Code Source
+&lt;/h4>&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-py" data-lang="py">&lt;span class="line">&lt;span class="cl">&lt;span class="kn">import&lt;/span> &lt;span class="nn">tiktoken&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># Nous importons la bibliothèque tiktoken.&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">encoding_gpt2&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">tiktoken&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">encoding_for_model&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;gpt-2&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># Au premier démmarage: télécharge le vocabulaire GPT-2.&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">print&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">encoding_gpt2&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">encode&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;The quick brown fox jumps over the lazy dog.&amp;#34;&lt;/span>&lt;span class="p">))&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># résultat: [464, 2068, 7586, 21831, 18045, 625, 262, 16931, 3290, 13]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">print&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">encoding_gpt2&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">decode&lt;/span>&lt;span class="p">([&lt;/span>&lt;span class="mi">464&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">2068&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">7586&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">21831&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">18045&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">625&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">262&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">16931&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">3290&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">13&lt;/span>&lt;span class="p">]))&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># résultat: The quick brown fox jumps over the lazy dog.&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="exercice-numéro-2">Exercice numéro #2
+&lt;/h3>&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-sh" data-lang="sh">&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># Installons la bibliothèque NumPy&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">pip install numpy
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># Créons le fichier contenant le code Python&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">touch cosine_similarity_part1.py
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># Editons le fichier&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">nano cosine_similarity_part1.py
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h4 id="exercice-numéro-2---code-source">Exercice numéro #2 - Code Source
+&lt;/h4>&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-py" data-lang="py">&lt;span class="line">&lt;span class="cl">&lt;span class="kn">import&lt;/span> &lt;span class="nn">numpy&lt;/span> &lt;span class="k">as&lt;/span> &lt;span class="nn">np&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># Define the vectors&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">Vx&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">np&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">array&lt;/span>&lt;span class="p">([&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">])&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">Vy&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">np&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">array&lt;/span>&lt;span class="p">([&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">])&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># Function to calculate cosine similarity&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">def&lt;/span> &lt;span class="nf">cosine_similarity&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">vector1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">vector2&lt;/span>&lt;span class="p">):&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1"># Calculate the dot product&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">dot_product&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">np&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">dot&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">vector1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">vector2&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1"># Calculate the norms of each vector&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">norm1&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">np&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">linalg&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">norm&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">vector1&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">norm2&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">np&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">linalg&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">norm&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">vector2&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1"># Calculate the cosine similarity&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">cosine_sim&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">dot_product&lt;/span> &lt;span class="o">/&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="n">norm1&lt;/span> &lt;span class="o">*&lt;/span> &lt;span class="n">norm2&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="n">cosine_sim&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1"># Calculate and print the cosine similarity&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">similarity&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">cosine_similarity&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">Vx&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">Vy&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">print&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="sa">f&lt;/span>&lt;span class="s2">&amp;#34;Cosine similarity (Vx,Vy): &lt;/span>&lt;span class="si">{&lt;/span>&lt;span class="n">similarity&lt;/span>&lt;span class="si">}&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="exercice-numéro-3">Exercice numéro #3
+&lt;/h3>&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-sh" data-lang="sh">&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># Installons la bibliothèque scikit-learn&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">pip install scikit-learn
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># Création du fichier contenant le code source&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">touch cosine_similarity_part2.py
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># Ouverture du fichier pour l&amp;#39;ajout du code&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">nano cosine_similarity_part2.py
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h4 id="exercice-numéro-3---code-source">Exercice numéro #3 - Code Source
+&lt;/h4>&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-py" data-lang="py">&lt;span class="line">&lt;span class="cl">&lt;span class="kn">from&lt;/span> &lt;span class="nn">sklearn.feature_extraction.text&lt;/span> &lt;span class="kn">import&lt;/span> &lt;span class="n">TfidfVectorizer&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kn">from&lt;/span> &lt;span class="nn">sklearn.metrics.pairwise&lt;/span> &lt;span class="kn">import&lt;/span> &lt;span class="n">cosine_similarity&lt;/span>&lt;span class="o">^&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">sentences&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">[&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s2">&amp;#34;I am fond of reading thriller novels.&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="c1"># x&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s2">&amp;#34;I prefer reading thriller novels.&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="c1"># y&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s2">&amp;#34;Yesterday, I arrived late.&amp;#34;&lt;/span> &lt;span class="c1"># z&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># Initialize a TF-IDF Vectorizer&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">vectorizer&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">TfidfVectorizer&lt;/span>&lt;span class="p">()&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># Fit and transform the sentences to a TF-IDF matrix&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">tfidf_matrix&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">vectorizer&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">fit_transform&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">sentences&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># Compute the cosine similarity matrix&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">cosine_sim&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">cosine_similarity&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">tfidf_matrix&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">tfidf_matrix&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">print&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;Cosine Similarity Matrix:&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">cosine_sim&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="références">Références
+&lt;/h2>&lt;ul>
+&lt;li>&lt;a class="link" href="https://fr.wikipedia.org/wiki/Grand_mod%C3%A8le_de_langage" target="_blank" rel="noopener"
+>Wikipedia - Large Langage Model&lt;/a>.&lt;/li>
+&lt;li>&lt;a class="link" href="https://github.com/openai/tiktoken" target="_blank" rel="noopener"
+>Github - Tiktoken&lt;/a>.&lt;/li>
+&lt;li>&lt;a class="link" href="https://huggingface.co/" target="_blank" rel="noopener"
+>HuggingFace - Site&lt;/a>.&lt;/li>
+&lt;li>&lt;a class="link" href="https://linuxfr.org/users/aboulle/journaux/introduction-pratique-aux-grands-modeles-de-langage-llm" target="_blank" rel="noopener"
+>LinuxFr - Intro aux LLMs&lt;/a>.&lt;/li>
+&lt;li>&lt;a class="link" href="https://gpt-tokenizer.dev/" target="_blank" rel="noopener"
+>GPT Tokenizer - Site&lt;/a>.&lt;/li>
+&lt;li>&lt;a class="link" href="https://huggingface.co/spaces/Xenova/the-tokenizer-playground" target="_blank" rel="noopener"
+>HuggingFace - The Tokenizer Playground&lt;/a>.&lt;/li>
+&lt;li>&lt;a class="link" href="https://algebrica.org/cosine-similarity/" target="_blank" rel="noopener"
+>Algebrica - Cosine Similarity&lt;/a>.&lt;/li>
+&lt;li>&lt;a class="link" href="https://www.schoolmouv.fr/" target="_blank" rel="noopener"
+>Schoolmouv - Site&lt;/a>.&lt;/li>
+&lt;li>&lt;a class="link" href="https://github.com/ggerganov/whisper.cpp/discussions/166" target="_blank" rel="noopener"
+>Github - Whisper.cpp&lt;/a> | Real-time transcription on Raspberry Pi 4.&lt;/li>
+&lt;li>&lt;a class="link" href="https://blog.miguelgrinberg.com/post/how-llms-work-explained-without-math" target="_blank" rel="noopener"
+>Miguel Gringberg - Blog&lt;/a> | How LLMs work explained without math.&lt;/li>
+&lt;li>&lt;a class="link" href="https://scikit-learn.org/stable/" target="_blank" rel="noopener"
+>Scikit Learn - Site&lt;/a>.&lt;/li>
+&lt;/ul></description></item><item><title>Séance du 27 Avril 2024</title><link>https://rpi-landerne.github.io/seance/2024-04-27/</link><pubDate>Sat, 27 Apr 2024 00:00:00 +0000</pubDate><guid>https://rpi-landerne.github.io/seance/2024-04-27/</guid><description>&lt;h2 id="horaire-et-lieu">Horaire et Lieu
+&lt;/h2>&lt;p>Samedi de 10h à 12h à la MPT de Landerneau.&lt;/p>
+&lt;h2 id="au-programme">Au programme
+&lt;/h2>&lt;ul>
+&lt;li>Utilisation de la bibliothèque OpenCV.
+&lt;ul>
+&lt;li>Capture 3D&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Conception 3D.&lt;/li>
+&lt;/ul>
+&lt;h2 id="travaux-pratiques">Travaux Pratiques
+&lt;/h2>&lt;h3 id="exercice-numéro-1---code-source">Exercice numéro #1 - Code Source
+&lt;/h3>&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-py" data-lang="py">&lt;span class="line">&lt;span class="cl">&lt;span class="kn">import&lt;/span> &lt;span class="nn">cv2&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">video_capture&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">cv2&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">VideoCapture&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">while&lt;/span> &lt;span class="kc">True&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">result&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">video_frame&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">video_capture&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">read&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="c1"># read frames from the video&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span> &lt;span class="n">result&lt;/span> &lt;span class="ow">is&lt;/span> &lt;span class="kc">False&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">break&lt;/span> &lt;span class="c1"># terminate the loop if the frame is not read successfully&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">cv2&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">imshow&lt;/span>&lt;span class="p">(&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s2">&amp;#34;USB Camera Test&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">video_frame&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span> &lt;span class="n">cv2&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">waitKey&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">&amp;amp;&lt;/span> &lt;span class="mh">0xFF&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="nb">ord&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;q&amp;#34;&lt;/span>&lt;span class="p">):&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">break&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">video_capture&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">release&lt;/span>&lt;span class="p">()&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">cv2&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">destroyAllWindows&lt;/span>&lt;span class="p">()&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="références">Références
+&lt;/h2>&lt;ul>
+&lt;li>&lt;a class="link" href="https://randomnerdtutorials.com/set-up-usb-camera-opencv-raspberry-pi/" target="_blank" rel="noopener"
+>Randomnertutorials | Set up USB camera OpenCV Raspberry Pi&lt;/a>.&lt;/li>
+&lt;li>&lt;a class="link" href="https://spacemath.gsfc.nasa.gov/SMBooks/AstrophotographyV1.pdf" target="_blank" rel="noopener"
+>SpaceMath GSFC Nasa | Astrophotography PDF&lt;/a>.&lt;/li>
+&lt;li>&lt;a class="link" href="https://www.pythoncheatsheet.org/builtin/chr" target="_blank" rel="noopener"
+>PythonCheatSheet | Python chr() built-in function&lt;/a>.&lt;/li>
+&lt;/ul></description></item><item><title>Séance du 23 Septembre 2023</title><link>https://rpi-landerne.github.io/seance/2023-09-23/</link><pubDate>Sat, 23 Sep 2023 00:00:00 +0000</pubDate><guid>https://rpi-landerne.github.io/seance/2023-09-23/</guid><description>&lt;h2 id="horaire-et-lieu">Horaire et Lieu
+&lt;/h2>&lt;p>Samedi matin de 10h à 12h à la MPT de Landerneau.&lt;/p>
+&lt;h2 id="au-programme">Au Programme
+&lt;/h2>&lt;ul>
+&lt;li>Tour de table (suite).&lt;/li>
+&lt;li>Présentation de l&amp;rsquo;Atelier (suite).&lt;/li>
+&lt;li>Présentation du Raspberry Pi
+&lt;ul>
+&lt;li>Système d&amp;rsquo;Exploitation.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Présenration de Python
+&lt;ul>
+&lt;li>Installation de l&amp;rsquo;environnement.
+&lt;ul>
+&lt;li>Utilisation de l&amp;rsquo;application Thonny (éditeur pour Python).&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Premier programme en Python.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Utilisation de la ligne de commande.
+&lt;ul>
+&lt;li>&lt;code>ls&lt;/code> - pour lister les fichiers.&lt;/li>
+&lt;li>&lt;code>cd&lt;/code> - pour se déplacer dans un répertoire.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="travaux-pratiques">Travaux Pratiques
+&lt;/h2>&lt;p>Création d&amp;rsquo;un premier programme en Python&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-sh" data-lang="sh">&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># Nous créons le fichier&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">touch bonjour.py
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># Nous l&amp;#39;éditons&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">nano bonjour.py
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="code-source-python">Code Source Python
+&lt;/h3>&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-py" data-lang="py">&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># Déclaration des variables&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">mon_nom&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s2">&amp;#34;Kevin&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">mon_age&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mi">25&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">ma_température&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mf">37.2&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># Affichage des variables&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">print&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;mon nom est: &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">mon_nom&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">print&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;mon age est: &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">mon_age&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">print&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;ma temperature est: &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">ma_temperature&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">print&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="sa">f&lt;/span>&lt;span class="s2">&amp;#34;mon nom est &lt;/span>&lt;span class="si">{&lt;/span>&lt;span class="n">mon_nom&lt;/span>&lt;span class="si">}&lt;/span>&lt;span class="s2">, mon age &lt;/span>&lt;span class="si">{&lt;/span>&lt;span class="n">mon_age&lt;/span>&lt;span class="si">}&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># Si la variable mon_age est supérieure ou égale à 18 alors&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">if&lt;/span> &lt;span class="n">mon_age&lt;/span> &lt;span class="o">&amp;gt;=&lt;/span> &lt;span class="mi">18&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1"># Nous affichons que la personne est majeure&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nb">print&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;vous êtes majeur&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># Sinon&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">else&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1"># Nous affichons que la personne est mineure&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nb">print&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;vous êtes mineur&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="références">Références
+&lt;/h2>&lt;ul>
+&lt;li>&lt;a class="link" href="https://fr.wikipedia.org/wiki/R%C3%A9pertoire_%28informatique%29" target="_blank" rel="noopener"
+>Wikipedia | Concept de Fichiers et de Répertoires&lt;/a>.&lt;/li>
+&lt;li>&lt;a class="link" href="https://thonny.org/" target="_blank" rel="noopener"
+>Thonny | IDE pour programmer en Python&lt;/a>.&lt;/li>
+&lt;li>&lt;a class="link" href="https://waytolearnx.com/2020/06/tutoriels-python.html" target="_blank" rel="noopener"
+>WayToLearnX | Tutoriel Python&lt;/a>.&lt;/li>
+&lt;li>&lt;a class="link" href="https://docs.python.org/fr/3/tutorial/inputoutput.html#formatted-string-literals" target="_blank" rel="noopener"
+>Python Docs | Python sortie et chaîne de caractères formatée&lt;/a>.&lt;/li>
+&lt;li>&lt;a class="link" href="https://www.formatux.fr/formatux-fondamentaux/index.html" target="_blank" rel="noopener"
+>FormaTux | Les fondamentaux GNU/Linux&lt;/a>.&lt;/li>
+&lt;li>&lt;a class="link" href="https://web.mit.edu/mprat/Public/web/Terminus/Web/main.html" target="_blank" rel="noopener"
+>MIT - Terminus | Jeu pour apprendre les commandes Linux&lt;/a>.&lt;/li>
+&lt;li>&lt;a class="link" href="https://overthewire.org/wargames/bandit/" target="_blank" rel="noopener"
+>OverTheWire - Wargames Bandit | CTF pour les débutants&lt;/a>.&lt;/li>
+&lt;/ul></description></item><item><title>Séance du 12 Septembre 2023</title><link>https://rpi-landerne.github.io/seance/2023-09-12/</link><pubDate>Tue, 12 Sep 2023 00:00:00 +0000</pubDate><guid>https://rpi-landerne.github.io/seance/2023-09-12/</guid><description>&lt;h2 id="horaire-et-lieu">Horaire et Lieu
+&lt;/h2>&lt;p>Mardi de 18h à 20h à la MPT de Landerneau.&lt;/p>
+&lt;ul>
+&lt;li>Première séance annuelle.&lt;/li>
+&lt;/ul>
+&lt;h2 id="au-programme">Au Programme
+&lt;/h2>&lt;ul>
+&lt;li>Tour de table pour les nouveaux adhérents.&lt;/li>
+&lt;li>Présentation de l&amp;rsquo;Atelier (Programme).&lt;/li>
+&lt;li>Présentation de la Raspberry Pi.&lt;/li>
+&lt;li>Présentation de GNU/Linux (Noyau et Système d&amp;rsquo;Exploitation).&lt;/li>
+&lt;li>Présentation de Python (Langage de Programmation).&lt;/li>
+&lt;/ul>
+&lt;h2 id="références">Références
+&lt;/h2>&lt;ul>
+&lt;li>&lt;a class="link" href="https://www.fun-mooc.fr/fr/cours/apprendre-a-coder-avec-python/" target="_blank" rel="noopener"
+>FunMooc | Apprendre a coder avec Python&lt;/a>.&lt;/li>
+&lt;li>&lt;a class="link" href="https://unik-informatique.com/" target="_blank" rel="noopener"
+>Unik Informatique | PC reconditionnés à Brest&lt;/a>.&lt;/li>
+&lt;li>&lt;a class="link" href="https://youtube.com/watch?v=LamjAFnybo0" target="_blank" rel="noopener"
+>Youtube - Docstring | Apprendre Python de A a Z (Vidéo de 7h)&lt;/a>.&lt;/li>
+&lt;li>&lt;a class="link" href="https://fr.wikibooks.org/wiki/Programmation_Python" target="_blank" rel="noopener"
+>WikiLivres | Programmation Python&lt;/a>.&lt;/li>
+&lt;li>&lt;a class="link" href="https://www.fullcirclemag.fr/" target="_blank" rel="noopener"
+>Fullcirclemag | Magazine autour de la communauté Ubuntu Linux (gratuit)&lt;/a>.&lt;/li>
+&lt;li>&lt;a class="link" href="https://inforef.be/swi/download/apprendre_python3_5.pdf" target="_blank" rel="noopener"
+>Inforef | Apprendre à programmer avec Python 3 (PDF)&lt;/a>.&lt;/li>
+&lt;li>&lt;a class="link" href="https://magpi.raspberrypi.com/books" target="_blank" rel="noopener"
+>RaspberryPi - MagPi | Livres sur la Raspberry Pi et autre (gratuit)&lt;/a>.&lt;/li>
+&lt;li>&lt;a class="link" href="https://www.framboise314.fr/" target="_blank" rel="noopener"
+>Framboise314 | Blog Français de référence sur le Raspberry Pi&lt;/a>.&lt;/li>
+&lt;li>&lt;strong>Magasins en ligne qui vendent le Raspberry Pi&lt;/strong>
+&lt;ul>
+&lt;li>&lt;a class="link" href="https://www.kubii.com/fr/168-kits-raspberry-pi-3-et-3" target="_blank" rel="noopener"
+>Kubii | Distributeur officiel, Kits Raspberry Pi 3 et 3+&lt;/a>.&lt;/li>
+&lt;li>&lt;a class="link" href="https://www.gotronic.fr/rechercher.htm?action=search&amp;amp;qm=raspberry" target="_blank" rel="noopener"
+>Gotronic | Recherche Raspberry&lt;/a>.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;a class="link" href="https://www.brachiograph.art/en/latest/tutorial/power/" target="_blank" rel="noopener"
+>Brachiograph - Documentation | Exemple de projet&lt;/a>.&lt;/li>
+&lt;/ul></description></item><item><title>Séance du 02 Septembre 2023</title><link>https://rpi-landerne.github.io/seance/2023-09-02/</link><pubDate>Sat, 02 Sep 2023 00:00:00 +0000</pubDate><guid>https://rpi-landerne.github.io/seance/2023-09-02/</guid><description>&lt;h2 id="horaire-et-lieu">Horaire et Lieu
+&lt;/h2>&lt;p>Samedi de 09h à 17h au Carrefour des Associations de Landerneau.&lt;/p>
+&lt;h2 id="au-programme">Au programme
+&lt;/h2>&lt;ul>
+&lt;li>Présence au carrefour des associations de Landerneau.
+&lt;ul>
+&lt;li>Pour présenter, discuter sur, les Raspberry Pi.&lt;/li>
+&lt;li>Prendre les adhésions des nouveaux participants à l&amp;rsquo;atelier.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul></description></item><item><title>Séance du 24 Juin 2023</title><link>https://rpi-landerne.github.io/seance/2023-06-24/</link><pubDate>Sat, 24 Jun 2023 00:00:00 +0000</pubDate><guid>https://rpi-landerne.github.io/seance/2023-06-24/</guid><description>&lt;h2 id="horaire-et-lieu">Horaire et Lieu
+&lt;/h2>&lt;p>Samedi matin de 10h à 12h à la MPT de Landerneau.&lt;/p>
+&lt;h2 id="au-programme">Au programme
+&lt;/h2>&lt;ul>
+&lt;li>Actualités Tech.&lt;/li>
+&lt;li>Les différents usages de la Raspberry Pi.
+&lt;ul>
+&lt;li>Faire un Point d&amp;rsquo;Accès WIFI avec la Raspberry Pi.&lt;/li>
+&lt;li>Fabriquer une console Rétro.&lt;/li>
+&lt;li>Faire un Média Server.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="références">Références
+&lt;/h2>&lt;ul>
+&lt;li>&lt;a class="link" href="https://raspap.com/" target="_blank" rel="noopener"
+>Raspap | Pour faire un Point d&amp;rsquo;Accès WIFI&lt;/a>.&lt;/li>
+&lt;li>&lt;a class="link" href="https://pi-hole.net/" target="_blank" rel="noopener"
+>Pi-Hole | Pour faire un bloqueur de publicité en mode DNS&lt;/a>.&lt;/li>
+&lt;li>&lt;a class="link" href="https://www.recalbox.com/fr/" target="_blank" rel="noopener"
+>Recalbox | Pour faire une console Retro&lt;/a>.&lt;/li>
+&lt;li>&lt;a class="link" href="https://www.home-assistant.io/installation/raspberrypi/" target="_blank" rel="noopener"
+>Home-Assistant | Pour faire un serveur central de domotique&lt;/a>.&lt;/li>
+&lt;li>&lt;a class="link" href="https://kodi.tv/" target="_blank" rel="noopener"
+>KodiTV | Pour faire un centre multimédia&lt;/a>.&lt;/li>
+&lt;/ul></description></item><item><title>Archives</title><link>https://rpi-landerne.github.io/archives/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://rpi-landerne.github.io/archives/</guid><description/></item><item><title>Recherche</title><link>https://rpi-landerne.github.io/recherche/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://rpi-landerne.github.io/recherche/</guid><description/></item></channel></rss>

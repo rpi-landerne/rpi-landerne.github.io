@@ -1,0 +1,180 @@
+<!doctype html><html lang=fr-fr dir=ltr><head><meta charset=utf-8><meta name=viewport content='width=device-width,initial-scale=1'><meta name=description content='Horaire et Lieu Mardi de 18h à 20h à la MPT de Landerneau. Au programme Comment ça marche: Large Language Model (LLM): tokenizer. Avec des exemples. BrachioGraph intégration Travaux Pratiques Exercice numéro #1 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 # Nous nous déplaçons dans le répertoire de travail cd travail # Nous créons un répertoire "llm" mkdir llm # Nous nous déplaçons dans ce dernier cd llm # Nous créons un environnement virtuel python3 -m venv .'><title>Séance du 14 Mai 2024</title>
+<link rel=canonical href=https://rpi-landerne.github.io/seance/2024-05-14/><link rel=stylesheet href=/scss/style.min.0304c6baf04e01a8fe70693791cb744d56a3578a3120a8796cefc66825aa39c7.css><meta property='og:title' content="Séance du 14 Mai 2024"><meta property='og:description' content='Horaire et Lieu Mardi de 18h à 20h à la MPT de Landerneau. Au programme Comment ça marche: Large Language Model (LLM): tokenizer. Avec des exemples. BrachioGraph intégration Travaux Pratiques Exercice numéro #1 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 # Nous nous déplaçons dans le répertoire de travail cd travail # Nous créons un répertoire "llm" mkdir llm # Nous nous déplaçons dans ce dernier cd llm # Nous créons un environnement virtuel python3 -m venv .'><meta property='og:url' content='https://rpi-landerne.github.io/seance/2024-05-14/'><meta property='og:site_name' content='RPi Landerne'><meta property='og:type' content='article'><meta property='article:section' content='Post'><meta property='article:published_time' content='2024-05-14T00:00:00+00:00'><meta property='article:modified_time' content='2024-05-14T00:00:00+00:00'><meta name=twitter:title content="Séance du 14 Mai 2024"><meta name=twitter:description content='Horaire et Lieu Mardi de 18h à 20h à la MPT de Landerneau. Au programme Comment ça marche: Large Language Model (LLM): tokenizer. Avec des exemples. BrachioGraph intégration Travaux Pratiques Exercice numéro #1 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 # Nous nous déplaçons dans le répertoire de travail cd travail # Nous créons un répertoire "llm" mkdir llm # Nous nous déplaçons dans ce dernier cd llm # Nous créons un environnement virtuel python3 -m venv .'><link rel="shortcut icon" href=/favicon.png></head><body class=article-page><script>(function(){const e="StackColorScheme";localStorage.getItem(e)||localStorage.setItem(e,"auto")})()</script><script>(function(){const t="StackColorScheme",e=localStorage.getItem(t),n=window.matchMedia("(prefers-color-scheme: dark)").matches===!0;e=="dark"||e==="auto"&&n?document.documentElement.dataset.scheme="dark":document.documentElement.dataset.scheme="light"})()</script><div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky"><button class="hamburger hamburger--spin" type=button id=toggle-menu aria-label="Afficher le menu">
+<span class=hamburger-box><span class=hamburger-inner></span></span></button><header><figure class=site-avatar><a href=/><img src=/img/logo_hu5af968c5c2b6602edc0ba170b1d5d8df_379902_300x0_resize_box_3.png width=300 height=300 class=site-logo loading=lazy alt=Avatar></a></figure><div class=site-meta><h1 class=site-name><a href=/>RPi Landerne</a></h1><h2 class=site-description>Site de l'Atelier Raspberry Pi situé à la MPT de Landerneau.</h2></div></header><ol class=menu id=main-menu><li><a href=/><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><polyline points="5 12 3 12 12 3 21 12 19 12"/><path d="M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7"/><path d="M9 21v-6a2 2 0 012-2h2a2 2 0 012 2v6"/></svg>
+<span>Accueil</span></a></li><li><a href=/archives/><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><rect x="3" y="4" width="18" height="4" rx="2"/><path d="M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8"/><line x1="10" y1="12" x2="14" y2="12"/></svg>
+<span>Archives</span></a></li><li><a href=/recherche/><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="10" cy="10" r="7"/><line x1="21" y1="21" x2="15" y2="15"/></svg>
+<span>Recherche</span></a></li><li class=menu-bottom-section><ol class=menu><li id=dark-mode-toggle><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="8" cy="12" r="2"/><rect x="2" y="6" width="20" height="12" rx="6"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="16" cy="12" r="2"/><rect x="2" y="6" width="20" height="12" rx="6"/></svg>
+<span>Mode sombre</span></li></ol></li></ol></aside><aside class="sidebar right-sidebar sticky"><section class="widget archives"><div class=widget-icon><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><line x1="5" y1="9" x2="19" y2="9"/><line x1="5" y1="15" x2="19" y2="15"/><line x1="11" y1="4" x2="7" y2="20"/><line x1="17" y1="4" x2="13" y2="20"/></svg></div><h2 class="widget-title section-title">Table des matières</h2><div class=widget--toc><nav id=TableOfContents><ol><li><a href=#horaire-et-lieu>Horaire et Lieu</a></li><li><a href=#au-programme>Au programme</a></li><li><a href=#travaux-pratiques>Travaux Pratiques</a><ol><li><a href=#exercice-numéro-1>Exercice numéro #1</a><ol><li><a href=#exercice-numéro-1---code-source>Exercice numéro #1 - Code Source</a></li></ol></li><li><a href=#exercice-numéro-2>Exercice numéro #2</a><ol><li><a href=#exercice-numéro-2---code-source>Exercice numéro #2 - Code Source</a></li></ol></li><li><a href=#exercice-numéro-3>Exercice numéro #3</a><ol><li><a href=#exercice-numéro-3---code-source>Exercice numéro #3 - Code Source</a></li></ol></li></ol></li><li><a href=#références>Références</a></li></ol></nav></div></section></aside><main class="main full-width"><article class=main-article><header class=article-header><div class=article-details><div class=article-title-wrapper><h2 class=article-title><a href=/seance/2024-05-14/>Séance du 14 Mai 2024</a></h2></div><footer class=article-time><div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M11.795 21H5a2 2 0 01-2-2V7a2 2 0 012-2h12a2 2 0 012 2v4"/><circle cx="18" cy="18" r="4"/><path d="M15 3v4"/><path d="M7 3v4"/><path d="M3 11h16"/><path d="M18 16.496V18l1 1"/></svg>
+<time class=article-time--published>14 May, 2024</time></div><div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg>
+<time class=article-time--reading>3 minutes de lecture</time></div></footer></div></header><section class=article-content><h2 id=horaire-et-lieu>Horaire et Lieu</h2><p>Mardi de 18h à 20h à la MPT de Landerneau.</p><h2 id=au-programme>Au programme</h2><ul><li>Comment ça marche: Large Language Model (LLM): tokenizer.<ul><li>Avec des exemples.</li></ul></li><li>BrachioGraph<ul><li>intégration</li></ul></li></ul><h2 id=travaux-pratiques>Travaux Pratiques</h2><h3 id=exercice-numéro-1>Exercice numéro #1</h3><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-sh data-lang=sh><span class=line><span class=cl><span class=c1># Nous nous déplaçons dans le répertoire de travail</span>
+</span></span><span class=line><span class=cl><span class=nb>cd</span> travail
+</span></span><span class=line><span class=cl><span class=c1># Nous créons un répertoire &#34;llm&#34;</span>
+</span></span><span class=line><span class=cl>mkdir llm
+</span></span><span class=line><span class=cl><span class=c1># Nous nous déplaçons dans ce dernier</span>
+</span></span><span class=line><span class=cl><span class=nb>cd</span> llm
+</span></span><span class=line><span class=cl><span class=c1># Nous créons un environnement virtuel</span>
+</span></span><span class=line><span class=cl>python3 -m venv .venv
+</span></span><span class=line><span class=cl><span class=c1># Nous activons l&#39;environnement virtuel</span>
+</span></span><span class=line><span class=cl><span class=nb>source</span> .venv/bin/activate
+</span></span><span class=line><span class=cl><span class=c1># Procédons à l&#39;installation de la bibliothèque Tiktoken</span>
+</span></span><span class=line><span class=cl><span class=c1># Code source de la bibliothèque : https://github.com/openai/tiktoken</span>
+</span></span><span class=line><span class=cl><span class=c1># transformer des mots en nombres pour un traitement numérique de données</span>
+</span></span><span class=line><span class=cl>pip install tiktoken
+</span></span><span class=line><span class=cl><span class=c1># A présent créons le fichier pour y mettre du code</span>
+</span></span><span class=line><span class=cl>touch test_tiktoken.py
+</span></span><span class=line><span class=cl><span class=c1># Editons ce dernier</span>
+</span></span><span class=line><span class=cl>nano test_tiktoken.py
+</span></span></code></pre></td></tr></table></div></div><h4 id=exercice-numéro-1---code-source>Exercice numéro #1 - Code Source</h4><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-py data-lang=py><span class=line><span class=cl><span class=kn>import</span> <span class=nn>tiktoken</span>
+</span></span><span class=line><span class=cl><span class=c1># Nous importons la bibliothèque tiktoken.</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=n>encoding_gpt2</span> <span class=o>=</span> <span class=n>tiktoken</span><span class=o>.</span><span class=n>encoding_for_model</span><span class=p>(</span><span class=s2>&#34;gpt-2&#34;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=c1># Au premier démmarage: télécharge le vocabulaire GPT-2.</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=nb>print</span><span class=p>(</span><span class=n>encoding_gpt2</span><span class=o>.</span><span class=n>encode</span><span class=p>(</span><span class=s2>&#34;The quick brown fox jumps over the lazy dog.&#34;</span><span class=p>))</span>
+</span></span><span class=line><span class=cl><span class=c1># résultat: [464, 2068, 7586, 21831, 18045, 625, 262, 16931, 3290, 13]</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=nb>print</span><span class=p>(</span><span class=n>encoding_gpt2</span><span class=o>.</span><span class=n>decode</span><span class=p>([</span><span class=mi>464</span><span class=p>,</span> <span class=mi>2068</span><span class=p>,</span> <span class=mi>7586</span><span class=p>,</span> <span class=mi>21831</span><span class=p>,</span> <span class=mi>18045</span><span class=p>,</span> <span class=mi>625</span><span class=p>,</span> <span class=mi>262</span><span class=p>,</span> <span class=mi>16931</span><span class=p>,</span> <span class=mi>3290</span><span class=p>,</span> <span class=mi>13</span><span class=p>]))</span>
+</span></span><span class=line><span class=cl><span class=c1># résultat: The quick brown fox jumps over the lazy dog.</span>
+</span></span></code></pre></td></tr></table></div></div><h3 id=exercice-numéro-2>Exercice numéro #2</h3><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-sh data-lang=sh><span class=line><span class=cl><span class=c1># Installons la bibliothèque NumPy</span>
+</span></span><span class=line><span class=cl>pip install numpy
+</span></span><span class=line><span class=cl><span class=c1># Créons le fichier contenant le code Python</span>
+</span></span><span class=line><span class=cl>touch cosine_similarity_part1.py
+</span></span><span class=line><span class=cl><span class=c1># Editons le fichier</span>
+</span></span><span class=line><span class=cl>nano cosine_similarity_part1.py
+</span></span></code></pre></td></tr></table></div></div><h4 id=exercice-numéro-2---code-source>Exercice numéro #2 - Code Source</h4><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-py data-lang=py><span class=line><span class=cl><span class=kn>import</span> <span class=nn>numpy</span> <span class=k>as</span> <span class=nn>np</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># Define the vectors</span>
+</span></span><span class=line><span class=cl><span class=n>Vx</span> <span class=o>=</span> <span class=n>np</span><span class=o>.</span><span class=n>array</span><span class=p>([</span><span class=mi>0</span><span class=p>,</span> <span class=mi>1</span><span class=p>,</span> <span class=mi>0</span><span class=p>,</span> <span class=mi>1</span><span class=p>,</span> <span class=mi>0</span><span class=p>,</span> <span class=mi>1</span><span class=p>,</span> <span class=mi>1</span><span class=p>,</span> <span class=mi>0</span><span class=p>])</span>
+</span></span><span class=line><span class=cl><span class=n>Vy</span> <span class=o>=</span> <span class=n>np</span><span class=o>.</span><span class=n>array</span><span class=p>([</span><span class=mi>0</span><span class=p>,</span> <span class=mi>0</span><span class=p>,</span> <span class=mi>0</span><span class=p>,</span> <span class=mi>1</span><span class=p>,</span> <span class=mi>1</span><span class=p>,</span> <span class=mi>1</span><span class=p>,</span> <span class=mi>1</span><span class=p>,</span> <span class=mi>0</span><span class=p>])</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># Function to calculate cosine similarity</span>
+</span></span><span class=line><span class=cl><span class=k>def</span> <span class=nf>cosine_similarity</span><span class=p>(</span><span class=n>vector1</span><span class=p>,</span> <span class=n>vector2</span><span class=p>):</span>
+</span></span><span class=line><span class=cl>  <span class=c1># Calculate the dot product</span>
+</span></span><span class=line><span class=cl>  <span class=n>dot_product</span> <span class=o>=</span> <span class=n>np</span><span class=o>.</span><span class=n>dot</span><span class=p>(</span><span class=n>vector1</span><span class=p>,</span> <span class=n>vector2</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>  <span class=c1># Calculate the norms of each vector</span>
+</span></span><span class=line><span class=cl>  <span class=n>norm1</span> <span class=o>=</span> <span class=n>np</span><span class=o>.</span><span class=n>linalg</span><span class=o>.</span><span class=n>norm</span><span class=p>(</span><span class=n>vector1</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>  <span class=n>norm2</span> <span class=o>=</span> <span class=n>np</span><span class=o>.</span><span class=n>linalg</span><span class=o>.</span><span class=n>norm</span><span class=p>(</span><span class=n>vector2</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>  <span class=c1># Calculate the cosine similarity</span>
+</span></span><span class=line><span class=cl>  <span class=n>cosine_sim</span> <span class=o>=</span> <span class=n>dot_product</span> <span class=o>/</span> <span class=p>(</span><span class=n>norm1</span> <span class=o>*</span> <span class=n>norm2</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>  <span class=k>return</span> <span class=n>cosine_sim</span>
+</span></span><span class=line><span class=cl>  
+</span></span><span class=line><span class=cl>  <span class=c1># Calculate and print the cosine similarity</span>
+</span></span><span class=line><span class=cl>  <span class=n>similarity</span> <span class=o>=</span> <span class=n>cosine_similarity</span><span class=p>(</span><span class=n>Vx</span><span class=p>,</span> <span class=n>Vy</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=nb>print</span><span class=p>(</span><span class=sa>f</span><span class=s2>&#34;Cosine similarity (Vx,Vy): </span><span class=si>{</span><span class=n>similarity</span><span class=si>}</span><span class=s2>&#34;</span><span class=p>)</span>
+</span></span></code></pre></td></tr></table></div></div><h3 id=exercice-numéro-3>Exercice numéro #3</h3><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-sh data-lang=sh><span class=line><span class=cl><span class=c1># Installons la bibliothèque scikit-learn</span>
+</span></span><span class=line><span class=cl>pip install scikit-learn
+</span></span><span class=line><span class=cl><span class=c1># Création du fichier contenant le code source</span>
+</span></span><span class=line><span class=cl>touch cosine_similarity_part2.py
+</span></span><span class=line><span class=cl><span class=c1># Ouverture du fichier pour l&#39;ajout du code</span>
+</span></span><span class=line><span class=cl>nano cosine_similarity_part2.py
+</span></span></code></pre></td></tr></table></div></div><h4 id=exercice-numéro-3---code-source>Exercice numéro #3 - Code Source</h4><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-py data-lang=py><span class=line><span class=cl><span class=kn>from</span> <span class=nn>sklearn.feature_extraction.text</span> <span class=kn>import</span> <span class=n>TfidfVectorizer</span>
+</span></span><span class=line><span class=cl><span class=kn>from</span> <span class=nn>sklearn.metrics.pairwise</span> <span class=kn>import</span> <span class=n>cosine_similarity</span><span class=o>^</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=n>sentences</span> <span class=o>=</span> <span class=p>[</span>
+</span></span><span class=line><span class=cl>    <span class=s2>&#34;I am fond of reading thriller novels.&#34;</span><span class=p>,</span>  <span class=c1># x</span>
+</span></span><span class=line><span class=cl>    <span class=s2>&#34;I prefer reading thriller novels.&#34;</span><span class=p>,</span>      <span class=c1># y</span>
+</span></span><span class=line><span class=cl>    <span class=s2>&#34;Yesterday, I arrived late.&#34;</span>              <span class=c1># z</span>
+</span></span><span class=line><span class=cl><span class=p>]</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># Initialize a TF-IDF Vectorizer</span>
+</span></span><span class=line><span class=cl><span class=n>vectorizer</span> <span class=o>=</span> <span class=n>TfidfVectorizer</span><span class=p>()</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># Fit and transform the sentences to a TF-IDF matrix</span>
+</span></span><span class=line><span class=cl><span class=n>tfidf_matrix</span> <span class=o>=</span> <span class=n>vectorizer</span><span class=o>.</span><span class=n>fit_transform</span><span class=p>(</span><span class=n>sentences</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># Compute the cosine similarity matrix</span>
+</span></span><span class=line><span class=cl><span class=n>cosine_sim</span> <span class=o>=</span> <span class=n>cosine_similarity</span><span class=p>(</span><span class=n>tfidf_matrix</span><span class=p>,</span> <span class=n>tfidf_matrix</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=nb>print</span><span class=p>(</span><span class=s2>&#34;Cosine Similarity Matrix:</span><span class=se>\n</span><span class=s2>&#34;</span><span class=p>,</span> <span class=n>cosine_sim</span><span class=p>)</span>
+</span></span></code></pre></td></tr></table></div></div><h2 id=références>Références</h2><ul><li><a class=link href=https://fr.wikipedia.org/wiki/Grand_mod%C3%A8le_de_langage target=_blank rel=noopener>Wikipedia - Large Langage Model</a>.</li><li><a class=link href=https://github.com/openai/tiktoken target=_blank rel=noopener>Github - Tiktoken</a>.</li><li><a class=link href=https://huggingface.co/ target=_blank rel=noopener>HuggingFace - Site</a>.</li><li><a class=link href=https://linuxfr.org/users/aboulle/journaux/introduction-pratique-aux-grands-modeles-de-langage-llm target=_blank rel=noopener>LinuxFr - Intro aux LLMs</a>.</li><li><a class=link href=https://gpt-tokenizer.dev/ target=_blank rel=noopener>GPT Tokenizer - Site</a>.</li><li><a class=link href=https://huggingface.co/spaces/Xenova/the-tokenizer-playground target=_blank rel=noopener>HuggingFace - The Tokenizer Playground</a>.</li><li><a class=link href=https://algebrica.org/cosine-similarity/ target=_blank rel=noopener>Algebrica - Cosine Similarity</a>.</li><li><a class=link href=https://www.schoolmouv.fr/ target=_blank rel=noopener>Schoolmouv - Site</a>.</li><li><a class=link href=https://github.com/ggerganov/whisper.cpp/discussions/166 target=_blank rel=noopener>Github - Whisper.cpp</a> | Real-time transcription on Raspberry Pi 4.</li><li><a class=link href=https://blog.miguelgrinberg.com/post/how-llms-work-explained-without-math target=_blank rel=noopener>Miguel Gringberg - Blog</a> | How LLMs work explained without math.</li><li><a class=link href=https://scikit-learn.org/stable/ target=_blank rel=noopener>Scikit Learn - Site</a>.</li></ul></section><footer class=article-footer><section class=article-copyright><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><path d="M14.5 9a3.5 4 0 100 6"/></svg>
+<span>Licensed under CC BY-NC-SA 4.0</span></section></footer></article><footer class=site-footer><section class=copyright>&copy;
+2017 -
+2024 RPi Landerne</section><section class=powerby>Généré avec <a href=https://gohugo.io/ target=_blank rel=noopener>Hugo</a><br>Thème <b><a href=https://github.com/CaiJimmy/hugo-theme-stack target=_blank rel=noopener data-version=3.26.0>Stack</a></b> conçu par <a href=https://jimmycai.com target=_blank rel=noopener>Jimmy</a></section></footer><div class=pswp tabindex=-1 role=dialog aria-hidden=true><div class=pswp__bg></div><div class=pswp__scroll-wrap><div class=pswp__container><div class=pswp__item></div><div class=pswp__item></div><div class=pswp__item></div></div><div class="pswp__ui pswp__ui--hidden"><div class=pswp__top-bar><div class=pswp__counter></div><button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+<button class="pswp__button pswp__button--share" title=Share></button>
+<button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button><div class=pswp__preloader><div class=pswp__preloader__icn><div class=pswp__preloader__cut><div class=pswp__preloader__donut></div></div></div></div></div><div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap"><div class=pswp__share-tooltip></div></div><button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+</button>
+<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button><div class=pswp__caption><div class=pswp__caption__center></div></div></div></div></div><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo=" crossorigin=anonymous defer></script><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU=" crossorigin=anonymous defer></script><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css crossorigin=anonymous><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css crossorigin=anonymous></main></div><script src=https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z+KMkF24hUW8WePSA9HM=" crossorigin=anonymous></script><script type=text/javascript src=/ts/main.js defer></script><script>(function(){const e=document.createElement("link");e.href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap",e.type="text/css",e.rel="stylesheet",document.head.appendChild(e)})()</script></body></html>
